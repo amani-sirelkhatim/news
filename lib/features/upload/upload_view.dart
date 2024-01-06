@@ -84,6 +84,7 @@ class _UploadViewState extends State<UploadView> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                style: getBodyStyle(color: AppColors.greyColor),
                 onChanged: (value) {
                   setState(() {
                     name = value;

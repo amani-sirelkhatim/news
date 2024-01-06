@@ -36,7 +36,7 @@ class _sliderState extends State<slider> {
           'e60aee32e1d34bfd8c0a7c2d3c23dd0e'; // Replace with your News API key
       final response = await get(
         Uri.parse(
-            'https://newsapi.org/v2/top-headlines?country=us&apiKey=$apiKey&q=general'),
+            'https://newsapi.org/v2/top-headlines?apiKey=$apiKey&q=general'),
       );
 
       if (response.statusCode == 200) {
@@ -48,7 +48,7 @@ class _sliderState extends State<slider> {
         setState(() {
           imageUrls = articles
               .map<String>((article) => article['urlToImage'] as String)
-              .where((url) => url != '') // Filter out articles without images
+              .where((url) => url != null) // Filter out articles without images
               .toList();
         });
       } else {
