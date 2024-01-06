@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:seccion6/burger.dart';
+
 import 'package:seccion6/features/news/cubit/news_cubit.dart';
 import 'package:seccion6/splash_view.dart';
 import 'package:seccion6/core/utils/colors.dart';
 import 'package:seccion6/core/utils/styles.dart';
 import 'package:seccion6/splash_view.dart';
-import 'package:seccion6/imagetest.dart';
 
 void main() async {
   await Hive.initFlutter();
