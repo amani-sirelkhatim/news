@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:seccion6/core/services/api_services.dart';
 
 import 'package:seccion6/core/storage/local_storage.dart';
 import 'package:seccion6/core/utils/colors.dart';
@@ -19,6 +20,7 @@ class _homeHeaderState extends State<homeHeader> {
   @override
   void initState() {
     super.initState();
+
     AppLocalStorage.getCachedData(AppLocalStorage.Name_Key).then((value) {
       setState(() {
         name = value;
@@ -60,7 +62,9 @@ class _homeHeaderState extends State<homeHeader> {
         Spacer(),
         CircleAvatar(
             radius: 28,
-            backgroundImage: FileImage(File(image!)) as ImageProvider),
+            backgroundImage: image != null
+                ? FileImage(File(image!)) as ImageProvider
+                : AssetImage('assets/user.png')),
       ],
     );
   }

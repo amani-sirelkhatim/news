@@ -38,6 +38,7 @@ class _profileState extends State<profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     
       body: Center(
           child: Padding(
         padding: const EdgeInsets.all(20.0),

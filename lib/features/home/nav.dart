@@ -8,7 +8,6 @@ import 'package:seccion6/features/profile/profile.dart';
 import 'package:seccion6/features/search/search.dart';
 import 'package:seccion6/features/source/source.dart';
 
-
 class homeView extends StatefulWidget {
   const homeView({super.key});
 
@@ -20,7 +19,7 @@ class _homeViewState extends State<homeView> {
   int currentindex = 0;
   List<Widget> screens = [
     const basicNews(),
-    const search(),
+    const SearchView(),
     const source(),
     const profile()
   ];

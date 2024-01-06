@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:lottie/lottie.dart';
+import 'package:seccion6/core/services/api_services.dart';
 import 'package:seccion6/core/storage/local_storage.dart';
 import 'package:seccion6/core/utils/colors.dart';
 import 'package:seccion6/core/utils/styles.dart';
@@ -19,6 +20,7 @@ class _splashState extends State<splash> {
   @override
   void initState() {
     super.initState();
+
     AppLocalStorage.getCachedData(AppLocalStorage.Is_uplouded).then((value) {
       isUpload = value ?? false;
     });
